@@ -5,8 +5,8 @@ public class Main
 {
 	public static void main(String[] args) {
 		Scanner pinInput = new Scanner(System.in);  // Create a Scanner object
-        System.out.println("Enter PIN");
-        String pin = pinInput.nextLine();
+        	System.out.println("Enter PIN");
+        	String pin = pinInput.nextLine();
 		
 		Validate(pin);
 	}
@@ -14,17 +14,17 @@ public class Main
 	public static boolean Validate(String pin) {
         
         if(pin.length() == 4 || pin.length() == 6) {
-            try {
-                int check = Integer.parseInt(pin);
-            } catch(NumberFormatException e) {
-                throw new NumberFormatException("PIN is Invalid: Use numbers only");
-            }
+        	try {
+                	int check = Integer.parseInt(pin);
+            	} catch(NumberFormatException e) {
+                	throw new NumberFormatException("PIN is Invalid: Use numbers only");
+            	}
         
-            System.out.println("PIN is Valid: " + pin.length());
-            return true;
+            	System.out.println("PIN is Valid: " + pin.length());
+            	return true;
         } else {
-            System.out.println("PIN is Invalid: " + pin.length());
-            return false;
+            	System.out.println("PIN is Invalid: " + pin.length());
+            	return false;
         }
     }
 }
