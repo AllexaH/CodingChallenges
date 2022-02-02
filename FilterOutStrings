@@ -1,0 +1,34 @@
+import java.util.Arrays;
+
+public class Main
+{
+	public static void main(String[] args) {
+		String myArray[] = {"1","2","a","b","3","4"};
+		int n = myArray.length;
+		ReturnInt(myArray, n);
+	}
+	
+	public static void ReturnInt(String myArray[], int n) {
+	    int i = 0;
+	    boolean skip = false;
+	    
+	    while(i < n) {
+	        String check = myArray[i];
+	        for(char ch : check.toCharArray()) {
+	            int num = (int) ch;
+	        
+    	        if(num < 48 || num > 57) {
+    	           skip = true;
+    	        }
+	        }
+	        
+	        if(skip == false) {
+	            int temp = Integer.parseInt(check);
+	            System.out.println(temp);
+	            //how to add to an array?
+	        }
+	        
+	        i++;
+	        skip = false;
+	    }
+	}
